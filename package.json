@@ -4,8 +4,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon Backend/src/index.ts",
-    "start": "node Backend/src/index.ts",
+    "dev": "nodemon src/index.ts",
+    "start": "node src/index.ts",
     "build": "npm install "
   },
   "keywords": [],
