@@ -11,7 +11,7 @@ export const verifyToken = (
   res: Response,
   next: NextFunction
 ): void => {
-  const token = extractTokenFromHeader(req);
+  const token = req.cookies.token;
   if (!token) res.status(401).json({ error: "Unauthorized" });
 
   try {
@@ -23,9 +23,4 @@ export const verifyToken = (
   } catch {
     res.status(403).json({ error: "Invalid token" });
   }
-};
-
-const extractTokenFromHeader = (request: Request): string => {
-  const [type, token] = request.headers.authorization?.split(" ") ?? [];
-  return type === "Bearer" ? token : "";
 };
