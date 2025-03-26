@@ -5,7 +5,6 @@
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
-    "prestart": "npm run build",
     "start": "node client/dist/index.js"
   },
   "keywords": [],
